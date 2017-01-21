@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html ng-app="App">
+
+<head>
+<meta charset="utf-8" >
+<title> </title>
+
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./js/lib/jquery.rating-2.0.min.js"></script>
+    <script src="./node_modules/lodash/lodash.min.js"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/dopstyle.css">
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/angular-route/angular-route.js"></script>
+    <script src="./node_modules/angular-resource/angular-resource.min.js"></script>
+
+    <script type="text/javascript" src="./node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/factory/goods.js"></script>
+    <script src="js/factory/reviews.js"></script>
+    <script src="js/factory/users.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid"
+         ng-controller="goodsCtrl as goodsCtrl" >
+        <div class="row  head-block" >
+        </div>
+        <div class="row head-block_2">
+            <div class="col-sm-offset-2 col-sm-2 logo">
+                <a href="/" ng-click="goodsCtrl.getUrl('main')">
+                    <img src="img/logo.gif" alt="logo">
+                </a>
+            </div>
+            <div class="col-ms-offset-1 col-sm-2 ">
+                <a href="/" class="btn btn-default product_button" ng-click="goodsCtrl.getUrl('main')">
+                    All products
+                </a>
+            </div>
+            <div class=" col-sm-1">
+                <a href="/" class="btn btn-default show_form" ng-click="goodsCtrl.getUrl('login')">
+                    Login
+                </a>
+            </div>
+            <div class=" col-sm-1 ">
+                <a href="/" class="btn btn-default show_form" ng-click="goodsCtrl.getUrl('signUp')">
+                    sign Up
+                </a>
+            </div>
+        </div>
+        <div ng-include="goodsCtrl.url">
+        </div>
+        <div class="row  bottom">
+        </div>
+        <footer class="row  footer-block">
+        </footer>
+    </div>
+</body>
+</html>
